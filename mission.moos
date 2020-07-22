@@ -1,0 +1,28 @@
+//  global variables anyone can use them
+ServerHost = localhost
+ServerPort = 9000
+
+Community = V1
+Simulator = false
+
+//---------------------------------------
+ProcessConfig = ANTLER
+{
+    Run = MOOSDB      @   NewConsole = false
+    Run = pAbort      @   NewConsole = false
+//    Run = uMS
+
+    ExecutablePath = SYSTEMPATH
+    MSBetweenLaunches = 200
+}
+//---------------------------------------
+
+//---------------------------------------
+ProcessConfig = pAbort
+{
+   AppTick= 20
+   CommsTick = 20
+
+   // Network port to open a TCP connection on
+   TCP_PORT = 9090
+}
